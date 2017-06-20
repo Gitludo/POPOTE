@@ -1,8 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+from django.http import Http404
 
-def home(request):
-    """ Exemple de page HTML, non valide pour que l'exemple soit concis """
-    text = """<h1>Bienvenue sur mon blog !</h1>
-              <p>Les crêpes bretonnes ça tue des mouettes en plein vol !</p>"""
-    return HttpResponse(text)
+def user(request):
+    return render(request, 'caisse/user.html')
+
+def accueil(request):
+    return render(request, 'caisse/accueil.html')
