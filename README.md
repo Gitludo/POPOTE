@@ -12,3 +12,7 @@ Page d'accueil avec la photo de chaque consommateur
 Page d'utilisateur avec la liste des consommables disponible
 Page de gestion des stocks
 Authentification
+
+## TODO
+
+* Creation des vues
