@@ -18,7 +18,7 @@ from django.contrib import admin
 from caisse import views
 
 urlpatterns = [
-    url(r'^', views.accueil),
+    url(r'^accueil$', views.accueil),
     url(r'^user$', views.user),
     url(r'^admin/', admin.site.urls),
 
