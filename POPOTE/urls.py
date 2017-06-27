@@ -20,7 +20,6 @@ from caisse import views
 urlpatterns = [
     url(r'^$', views.accueil),
     url(r'^user$', views.user, name='user'),
-    url(r'^login/$', views.login, name='login'),
     url(r'^admin/', admin.site.urls),
 
 ]
