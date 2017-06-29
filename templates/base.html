@@ -19,8 +19,10 @@
           <p class="navbar-brand">Suivi de la commande</p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="#">{% block content %}{% endblock %}<span class="glyphicon glyphicon-bitcoin"></span> Carte Popote</a></li>
+            <li><a href="#">{{totalPanier}}<span class="glyphicon glyphicon-glass"></span> Panier</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
       </div>
     </nav>
@@ -35,7 +37,7 @@
                         <button type="button" class="btn btn-danger" id="moinsB" onclick="minus()">-</button>
                         <button type="button" class="btn btn-success" id="plusB" onclick="plus()">+</button>
                     </div>
-                    <button type="button" class="btn btn-primary">BIERE 1664 <span class="badge"><input value="0" id="count"></span></button>
+                    <button type="button" class="btn btn-primary">BIERE 1664 {% block CartePopote %}{% endblock %}<span class="badge"><input value="0" id="count"></span></button>
                 </a>
             </div>
             <div class="col-xs-6 col-md-3 text-center">
