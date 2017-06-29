@@ -16,24 +16,26 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <p class="navbar-brand">Suivi de la commande</p>
+          <p class="navbar-brand">Suivi</p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">{% block content %}{% endblock %}<span class="glyphicon glyphicon-bitcoin"></span> Carte Popote</a></li>
-            <li><a href="#">{{totalPanier}}<span class="glyphicon glyphicon-glass"></span> Panier</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bitcoin"></span> Carte Popote</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-glass"></span> Panier</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
       </div>
     </nav>
 
+    {% block content %}{% endblock %}
+
     <div class="container"  style="margin-top:60px">
 
         <div class="row">
             <div class="col-xs-6 col-md-3 text-center">
                 <a href="#" class="thumbnail" title="LUDO">
-                    <img src="{% static 'images/dodo.jpg' %}" alt="Nature">
-                    <div class="btn-group btn-lg">
+                    <img src="{% static 'images/1664.jpg' %}" alt="Nature">
+                    <div class="btn-group  btn-lg">
                         <button type="button" class="btn btn-danger" id="moinsB" onclick="minus()">-</button>
                         <button type="button" class="btn btn-success" id="plusB" onclick="plus()">+</button>
                     </div>
@@ -42,32 +44,75 @@
             </div>
             <div class="col-xs-6 col-md-3 text-center">
                 <a href="#" class="thumbnail" title="LUDO">
-                    <img src="{% static 'images/dodo.jpg' %}" alt="Nature">
+                    <img src="{% static 'images/grim.jpg' %}" alt="Nature">
                     <div class="btn-group btn-lg">
                         <button type="button" class="btn btn-danger" id="moins" onclick="minus()">-</button>
                         <button type="button" class="btn btn-success" id="plus" onclick="plus()">+</button>
                     </div>
-                    <button type="button" class="btn btn-primary">COCA-COLA <span class="badge"><input value="0" id="count"></span></button>
+                    <button type="button" class="btn btn-primary">GRIMBERGEN <span class="badge"><input value="0" id="count"></span></button>
                 </a>
             </div>
             <div class="col-xs-6 col-md-3 text-center">
                 <a href="#" class="thumbnail" title="LUDO">
-                    <img src="{% static 'images/dodo.jpg' %}" alt="Nature">
-                    <div class="btn-group btn-group-lg">
-                        <button type="button" class="btn btn-danger">-</button>
-                        <button type="button" class="btn btn-success">+</button>
+                    <img src="{% static 'images/coca.jpg' %}" alt="Nature">
+                    <div class="btn-group btn-lg">
+                        <button type="button" class="btn btn-danger" id="moins" onclick="minus()">-</button>
+                        <button type="button" class="btn btn-success" id="plus" onclick="plus()">+</button>
                     </div>
-                    <p align="center">PERRIER</p>
+                    <button type="button" class="btn btn-primary">COCA COLA <span class="badge"><input value="0" id="count"></span></button>
                 </a>
             </div>
             <div class="col-xs-6 col-md-3 text-center">
                 <a href="#" class="thumbnail" title="LUDO">
-                    <img src="{% static 'images/dodo.jpg' %}" alt="Nature">
-                    <div class="btn-group btn-group-lg">
-                        <button type="button" class="btn btn-danger">-</button>
-                        <button type="button" class="btn btn-success">+</button>
+                    <img src="{% static 'images/fanta.jpg' %}" alt="Nature">
+                    <div class="btn-group btn-lg">
+                        <button type="button" class="btn btn-danger" id="moins" onclick="minus()">-</button>
+                        <button type="button" class="btn btn-success" id="plus" onclick="plus()">+</button>
                     </div>
-                    <p align="center">JUS D'ORANGE</p>
+                    <button type="button" class="btn btn-primary">FANTA <span class="badge"><input value="0" id="count"></span></button>
+                </a>
+            </div>
+        </div><!--row-->
+
+        <div class="row">
+            <div class="col-xs-6 col-md-3 text-center">
+                <a href="#" class="thumbnail" title="LUDO">
+                    <img src="{% static 'images/schweppes.jpg' %}" alt="Nature" height="115">
+                    <div class="btn-group btn-lg">
+                        <button type="button" class="btn btn-danger" id="moinsB" onclick="minus()">-</button>
+                        <button type="button" class="btn btn-success" id="plusB" onclick="plus()">+</button>
+                    </div>
+                    <button type="button" class="btn btn-primary">SCHWEPPES<span class="badge"><input value="0" id="count"></span></button>
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3 text-center">
+                <a href="#" class="thumbnail" title="LUDO">
+                    <img src="{% static 'images/perrier.jpg' %}" alt="Nature" height="115">
+                    <div class="btn-group btn-lg">
+                        <button type="button" class="btn btn-danger" id="moins" onclick="minus()">-</button>
+                        <button type="button" class="btn btn-success" id="plus" onclick="plus()">+</button>
+                    </div>
+                    <button type="button" class="btn btn-primary">PERRIER <span class="badge"><input value="0" id="count"></span></button>
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3 text-center">
+                <a href="#" class="thumbnail" title="LUDO">
+                    <img src="{% static 'images/dodo.jpg' %}" alt="Nature" height="115">
+                    <div class="btn-group btn-lg">
+                        <button type="button" class="btn btn-danger" id="moins" onclick="minus()">-</button>
+                        <button type="button" class="btn btn-success" id="plus" onclick="plus()">+</button>
+                    </div>
+                    <button type="button" class="btn btn-primary">DODO <span class="badge"><input value="0" id="count"></span></button>
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-3 text-center">
+                <a href="#" class="thumbnail" title="LUDO">
+                    <img src="{% static 'images/cacahuetes.jpg' %}" alt="Nature" height="115">
+                    <div class="btn-group btn-lg">
+                        <button type="button" class="btn btn-danger" id="moins" onclick="minus()">-</button>
+                        <button type="button" class="btn btn-success" id="plus" onclick="plus()">+</button>
+                    </div>
+                    <button type="button" class="btn btn-primary">CACAHUETES <span class="badge"><input value="0" id="count"></span></button>
                 </a>
             </div>
         </div><!--row-->
