@@ -27,8 +27,13 @@
       </div>
     </nav>
 
+     <div class="container"  style="margin-top:60px">
+
+    {% block CartePopote %}{% endblock %}
+     <br>
     {% block content %}{% endblock %}
 
+     </div>
     <div class="container"  style="margin-top:60px">
 
         <div class="row">
@@ -39,7 +44,7 @@
                         <button type="button" class="btn btn-danger" id="moinsB" onclick="minus()">-</button>
                         <button type="button" class="btn btn-success" id="plusB" onclick="plus()">+</button>
                     </div>
-                    <button type="button" class="btn btn-primary">BIERE 1664 {% block CartePopote %}{% endblock %}<span class="badge"><input value="0" id="count"></span></button>
+                    <button type="button" class="btn btn-primary">BIERE 1664 <span class="badge"><input value="0" id="count"></span></button>
                 </a>
             </div>
             <div class="col-xs-6 col-md-3 text-center">

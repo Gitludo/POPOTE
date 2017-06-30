@@ -5,7 +5,7 @@ from caisse.models import Stock
 
 
 def user(request):
-    article=Stock.produit
+    article = Stock
     return render(request, 'caisse/userPage.html', {'articles': article})
 
 

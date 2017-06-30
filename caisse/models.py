@@ -7,7 +7,4 @@ class Stock(models.Model):
     quantite = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True, auto_now=False)
 
-    def __str__(self):
-
-        return self.produit
 

@@ -2,12 +2,11 @@ from django.contrib import admin
 from .models import Stock
 
 
-
 class StockAdmin(admin.ModelAdmin):
    list_display   = ('produit', 'quantite', 'date')
    list_filter    = ('produit','quantite',)
-   date_hierarchy = 'date'
-   ordering       = ('produit', )
+   date_hierarchy = ('date')
+   ordering       = ('produit', 'quantite')
    search_fields  = ('produit', 'quantite')
 
 admin.site.register(Stock, StockAdmin)
