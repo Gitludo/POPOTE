@@ -5,8 +5,8 @@ from caisse.models import Stock
 
 
 def user(request):
-    article = Stock
-    return render(request, 'caisse/userPage.html', {'articles': article})
+    articles = Stock.objects.all()
+    return render(request, 'caisse/userPage.html', {'articles': articles})
 
 
 def accueil(request):

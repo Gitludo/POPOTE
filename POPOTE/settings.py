@@ -68,6 +68,8 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATE_DIRS = ["templates"]
+
 WSGI_APPLICATION = 'POPOTE.wsgi.application'
 
 
