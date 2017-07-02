@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Stock
+from .models import Stock, Consommateur
 
 
 class StockAdmin(admin.ModelAdmin):
@@ -9,6 +9,13 @@ class StockAdmin(admin.ModelAdmin):
    ordering       = ('produit', 'quantite')
    search_fields  = ('produit', 'quantite')
 
+class ConsommateurAdmin(admin.ModelAdmin):
+   list_display   = ('Nom', 'Prenom', 'Carte', 'Cafe')
+   list_filter    = ('Nom', 'Prenom', 'Carte', 'Cafe')
+   ordering       = ('Nom', 'Prenom', 'Carte', 'Cafe')
+   search_fields  = ('Nom', 'Prenom', 'Carte', 'Cafe')
+
 admin.site.register(Stock, StockAdmin)
+admin.site.register(Consommateur, ConsommateurAdmin)
 
 # Register your models here.
