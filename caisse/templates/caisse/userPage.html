@@ -5,4 +5,101 @@
   {{ article.quantite }}
 {% endfor %}
 {% endblock %}
-{% block content %}{{ articles.produit }}{% endblock %}
+
+{% block content %}
+    {% for article in articles %}
+        {{ article.id }}
+    {% endfor %}
+{% endblock %}
+
+{% block content_1 %}
+    {% for article in articles %}
+        {% if article.id == 1 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+{% block stock_1 %}
+    {% for article in articles %}
+        {% if article.id == 1 %}
+            {{ article.quantite }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+
+{% block content_2 %}
+    {% for article in articles %}
+        {% if article.id == 2 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+{% block content_3 %}
+    {% for article in articles %}
+        {% if article.id == 3 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+{% block content_4 %}
+    {% for article in articles %}
+        {% if article.id == 4 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+{% block content_5 %}
+    {% for article in articles %}
+        {% if article.id == 5 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+{% block content_6 %}
+    {% for article in articles %}
+        {% if article.id == 6 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+{% block content_7 %}
+    {% for article in articles %}
+        {% if article.id == 7 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
+{% block content_8 %}
+    {% for article in articles %}
+        {% if article.id == 8 %}
+            {{ article.produit }}
+        {% else %}
+
+        {% endif %}
+
+    {% endfor %}
+{% endblock %}
