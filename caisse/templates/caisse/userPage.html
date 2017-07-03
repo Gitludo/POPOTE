@@ -1,9 +1,39 @@
 {% extends 'base.html' %}
 
+<!-- HEADER -->
+
+{% block PointPopote %}
+        {{ "0" }}
+{% endblock %}
+
+{% block PointPanier %}
+        {{ "0" }}
+{% endblock %}
+
+{% block UserConected %}
+        {{ usename }}
+{% endblock %}
+
 {% block CartePopote %}
 {% for article in articles %}
   {{ article.quantite }}
 {% endfor %}
+{% endblock %}
+
+{% block CafeIcon %}
+    {% if toto == 1 %}
+        {{ "glyphicon-exclamation-sign" }}
+    {% else %}
+        {{ "glyphicon-ok-circle" }}
+    {% endif %}
+{% endblock %}
+
+{% block CafeColor %}
+    {% if toto == 1 %}
+        {{ "red" }}
+    {% else %}
+        {{ "green" }}
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -43,6 +73,7 @@
 
     {% endfor %}
 {% endblock %}
+
 {% block content_3 %}
     {% for article in articles %}
         {% if article.id == 3 %}
@@ -53,6 +84,7 @@
 
     {% endfor %}
 {% endblock %}
+
 {% block content_4 %}
     {% for article in articles %}
         {% if article.id == 4 %}
@@ -63,6 +95,7 @@
 
     {% endfor %}
 {% endblock %}
+
 {% block content_5 %}
     {% for article in articles %}
         {% if article.id == 5 %}
@@ -73,6 +106,7 @@
 
     {% endfor %}
 {% endblock %}
+
 {% block content_6 %}
     {% for article in articles %}
         {% if article.id == 6 %}
@@ -83,6 +117,7 @@
 
     {% endfor %}
 {% endblock %}
+
 {% block content_7 %}
     {% for article in articles %}
         {% if article.id == 7 %}
@@ -93,6 +128,7 @@
 
     {% endfor %}
 {% endblock %}
+
 {% block content_8 %}
     {% for article in articles %}
         {% if article.id == 8 %}

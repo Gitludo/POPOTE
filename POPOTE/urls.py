@@ -18,8 +18,9 @@ from django.contrib import admin
 from caisse import views
 
 urlpatterns = [
-    url(r'^$', views.accueil),
+    url(r'^$', views.accueil, name='accueil'),
     url(r'^user$', views.user, name='user'),
     url(r'^admin/', include(admin.site.urls)),
-
+    url(r'^connexion$', views.connexion, name='connexion'),
+    url(r'^deconnexion$', views.deconnexion, name='deconnexion'),
 ]

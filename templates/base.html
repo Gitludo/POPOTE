@@ -16,19 +16,19 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <p class="navbar-brand">Suivi</p>
+          <p class="navbar-brand">POPOTE</p>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-bitcoin"></span> Carte Popote</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-glass"></span> Panier</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            <li><a href="#"><span class="glyphicon {% block CafeIcon %}{% endblock %}" style="color:{% block CafeColor %}{% endblock %}"></span> Café</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bitcoin"></span>Carte Popote: {% block PointPopote %}{% endblock %}</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Panier: {% block PointPanier %}{% endblock %}</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>{% block UserConected %}{% endblock %} &nbsp;</a></li>
+            <li><a href="{% url 'deconnexion' %}"><span class="glyphicon glyphicon-log-out"></span> LOG OUT</a></li>
         </ul>
       </div>
     </nav>
 
      <div class="container"  style="margin-top:60px">
-
     {% block CartePopote %}{% endblock %}
      <br>
     {% block content %}{% endblock %}
